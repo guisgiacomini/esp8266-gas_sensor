@@ -11,6 +11,7 @@
 //Threshold to trigger the alarm (0-100 range)
 #define THRESHOLD 85
 
+//Information on Wi-Fi connection
 const char* ssid     = "SSID";        
 const char* password = "PASSWORD";     
 String phoneNumber = "PHONE-NUMBER";
@@ -66,7 +67,7 @@ void loop() {
     //Buzzer emits a 1000Hz sound
     tone(buzzer, 1000);
     //Continous alert messages are sent to the WhatsApp number registered 
-    whatsAppMessage("ALERTA - POSSÍVEL VAZAMENTO DE GÁS DETECTADO");
+    whatsAppMessage("ALERT - POSSIBLE GAS LEAKAGE DETECTED");
   }
   else{
     //No dangerous gas levels detected (under the threshold)
